@@ -37,7 +37,12 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <h1 class="text-center my-3">Html, Javascript & Bootstrap</h1>
                 <div class="row">
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                        <h2> Users </h2>
+                        <ul id="UnorderedList" class="list-group">
+
+                        </ul>
+                    </div>
                     <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
                     <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
                     <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
@@ -46,5 +51,27 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            let user1 = {};
+            let user2 = {};
+
+            user1.nickname = "chub0";
+            user1.code = 1;
+
+            user2.nickname = "ovit4Pro";
+            user2.code = 2;
+
+            let users = [];
+            users.push(user1);
+            users.push(user2);
+            let UnorderedList = document.getElementById("UnorderedList");
+            let items = "";
+            for (let u of users) {
+                items = items + '<li class="list-group-item">' + u.nickname + '</li>';
+            }
+            UnorderedList.innerHTML = items;
+        }
+    </script>
 </body>
 </html>
